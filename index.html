@@ -36,6 +36,14 @@
       border-left: 2px solid var(--accent);
     }
 
+    /* Logo sizing and spacing */
+    .logo {
+      display: block;
+      width: 120px;      /* adjust as needed */
+      height: auto;
+      margin-bottom: 1.5rem;
+    }
+
     /* Box around the intro text */
     .intro-box {
       border: 2px solid var(--accent);
@@ -81,20 +89,23 @@
 </head>
 <body>
   <div class="container">
-    <!-- Left third: intro with rounded box -->
+    <!-- Left third: logo + intro with rounded box -->
     <div class="sidebar">
+      <!-- 1) Logo above the intro -->
+      <img src="WAB.png" alt="WAB Logo" class="logo" />
+
+      <!-- 2) Your existing intro box -->
       <div class="intro-box">
         <h1>Hello! Welcome to the FCS General Knowledge Assistant</h1>
         <p>
           I am able to answer common questions associated with everyday FCS processes.
           Response time may vary, so I appreciate your patience.
         </p>
-        <p><strong>Here are examples of things I can help you with, and my knowledge base is growing!</strong></p>
+        <p><strong>Here are current topics I can help you with, and my information base is growing!</strong></p>
         <ul>
-          <li>"Please outline the customer and address onboarding process."</li>
-          <li>"Who is Graham White's controller?"</li>
-          <li>"Name the business units supported by FCS."</li>
-        </ul>
+          <li>Customer Onboarding and Customer Master Update Processes</li>
+          <li>Scope of Business Units Supported by Freight Customer Service</li>
+         </ul>
       </div>
     </div>
 
@@ -108,6 +119,7 @@
   </div>
 </body>
 </html>
+
 
 
 

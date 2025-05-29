@@ -36,6 +36,14 @@
       border-left: 2px solid var(--accent);
     }
 
+    /* Logo at top left */
+    .logo img {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
     /* Box around the intro text */
     .intro-box {
       border: 2px solid var(--accent);
@@ -81,33 +89,12 @@
 </head>
 <body>
   <div class="container">
-    <!-- Left third: intro with rounded box -->
+    <!-- Left third: logo + intro -->
     <div class="sidebar">
-      <div class="intro-box">
-        <h1>Hello!</h1>
-        <p>
-          This agent can answer common questions associated with FCS processes.
-          Response time may vary, so your patience is appreciated.
-        </p>
-        <p><strong>Here are some things the agent can help you with:</strong></p>
-        <ul>
-          <li>"Please outline the onboarding process."</li>
-          <li>"Who is Graham White's controller?"</li>
-          <li>"Name the business units support by FCS."</li>
-        </ul>
-      </div>
-    </div>
+      <!-- Base64 logo -->
+      <div class="logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAAxCAYAAAAY2M0MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAACa5SURBVHhe7Xx3eFVV2n2mfDOOhSK9BggJJCGhBIIUURGxYAEbjMpYRxnFAjqDOiJg17FiARRkRAUURaR36Z3QklBCKOm93bSbtr613ns3c83nPI88vxn/+fHCzjln9/uut+199r1BOQAKmCqYjKqY9FBW+69UweRlXrUq+G5L/UlZSmWWylGDQt7ls42HFdhZCR+ZivKAXDawdnW1qPOyvIbl6oyN69iJhtV8UlmrRJnVlUBhObtjKtfEqpGLWmTyjiVspD/n6GwoSGALkxo9EVcDQNz08qGKqVqJz6qgcjJZfFY1JXtgUhUv/9ZYYwIksCqZ65MEH5qqxD7qvOWoLc1HnafYJ2BMNSwr9FYhmw9FrFitTC8blbIfD1NVFfuupnDWmoCqq3OAnz0FCQcDWxwUVkoCgaQyv4JatvFXlVVXV3fvEp9rWMnJTA3BqSrMReqOjSja+gNw+jjNSS7lQUBTKGoJoodXtlFXvnYUmVreSWCqmCQJVP9q9lVhyTeUBMcanQP9rCjI/op5QkjcFNf5LNNLaMx8yszq2Xgrbvusqy95+UdJ7ZlfzUpSaNUX4PAWYvnE8Xi9exhW3Hgdcl9+EfiB4OfSxufL9BPwyjL2XcUufFpcWcEeyjkZAqoh1BdFxN8nSfN1458D/KwoyMBzKqkrOaoLoUCGPwl4Ff8fRisZ2Ez+tqonwFUFXj7t2Iq4u+7EzohopETFYsvF7bG6bQSKn3we2LQTyCLwJYVU5mxkeTPh4b86tfYLlWRQJlxzEOg2psqcuzkH+FlRkHHUr52mkLzIhIvB0uwipp8C24+vD/AKJuWTfN2pMltVMIA7sAfbbxqOr3/XEImtuyKvyyU4FdwDh0NjENfrMuAfHwAH97N9DlsUIqc6m32zM82n1KC3+bhYwwC2uIIlZu411jn6uRRkUbgCNJJMpjTbaZNhqD9CkZbXkFd1XiQI0mR7UBRfV04silklh03SmJnKtkypCTj+/lv4/oabsCz2UuyK6I1DLUOQemEbZDcLwdHgKNQ+PRFI3ss2WQS1GHmaieakMf2SpYuG9ym05mtq7r8/Rz+XfIDTPApTAS0TLs02sMVlrp5MtYSunslgaWCFY3g5a5bKD9M0VxHgqiO8j2e7REoFg7TUwwy/s6ii7HXlCqSOG4c9PfvgRLM28LbrgtONO2Jnp26Ie2IMcHg7+8xn7wzdtAzTeAJdk5MyE23NSwFcDcdWOgf42ZEPcJpIYaoATYBLe42XAps4WiGFIjsrjRomPSMKmQS3lHagiGY7bieKPp+B7FefRcbYu5F2x00o/fO9wJRJqP1oms9kF1OcCtl7ZjKw/Ftk3zkSO9u0xbGWHZHZvR829YzFN1cNZR0KRmUpvPmFqCuhagvwDF4Jep0U36ZTZQJnQZ4W8AFUU1OD0lLZKh/pWVTFZZ2SqE6S4yev14uyMrNVRnoWuXaiwPLaWp+Aqdz1E9ifI82hmm6nfll5OS2hP0/lvzTRhwtwH6bSbGm5+Wxpley6CopkrqvI7HKUFBHoAgKXTq396htsfvgBLLrxKnzbKxI/hHdFQqeuONa8E+IbdsDOpiHY0WsQ5kT1wZYnngA2rAFSjtJyn2Qwtxnpf74PW7uEYV2DJjjdbQA2duiBrPEM5pLoEqTh4of4X8A5CnhmCYZiZpbxoaC6mH+5Yie
 
-    <!-- Right two-thirds: embedded chat with divider -->
-    <div class="content">
-      <iframe
-        src="https://copilotstudio.microsoft.com/environments/f3e890b3-cfa2-e871-ac75-92ce50e7af1d/bots/cra55_fcsGeneralKnowledgeAssistant/webchat?__version__=2"
-        title="FCS General Knowledge Assistant"
-      ></iframe>
-    </div>
-  </div>
-</body>
-</html>
 
 
 

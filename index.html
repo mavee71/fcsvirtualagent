@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FCS General Knowledge Assistant</title>
   <style>
+    :root {
+      --accent: #0af;
+      --radius: 8px;
+    }
+
     /* Full-page black background */
     html, body {
       margin: 0;
@@ -22,39 +27,48 @@
       height: 100%;
     }
     .sidebar {
-      flex: 1;               /* one third */
+      flex: 1; /* one-third */
       padding: 2rem;
       box-sizing: border-box;
     }
     .content {
-      flex: 2;               /* two thirds */
+      flex: 2; /* two-thirds */
+      border-left: 2px solid var(--accent);
     }
 
-    /* Intro text styling */
-    .sidebar h1 {
+    /* Box around the intro text */
+    .intro-box {
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    /* Typography inside the box */
+    .intro-box h1 {
       font-size: 2rem;
+      margin-top: 0;
       margin-bottom: 1rem;
     }
-    .sidebar p {
+    .intro-box p {
       font-size: 1rem;
       line-height: 1.4;
       margin-bottom: 1.5rem;
     }
-    .sidebar ul {
-      list-style-type: none;
+    .intro-box ul {
+      list-style: none;
       padding: 0;
       font-size: 0.9rem;
     }
-    .sidebar ul li {
-      margin-bottom: 0.5rem;
-      padding-left: 1rem;
+    .intro-box ul li {
       position: relative;
+      padding-left: 1rem;
+      margin-bottom: 0.5rem;
     }
-    .sidebar ul li::before {
+    .intro-box ul li::before {
       content: "•";
       position: absolute;
       left: 0;
-      color: #0af;
+      color: var(--accent);
     }
 
     iframe {
@@ -67,22 +81,24 @@
 </head>
 <body>
   <div class="container">
-    <!-- Left third: intro -->
+    <!-- Left third: intro with rounded box -->
     <div class="sidebar">
-      <h1>Hello!</h1>
-      <p>
-        This agent can answer common questions associated with FCS processes.
-        Response time may vary, so your patience is appreciated.
-      </p>
-      <p><strong>Here are some things the agent can help you with:</strong></p>
-      <ul>
-        <li>"Outline onboarding process"</li>
-        <li>"Who is GWM's controller?"</li>
-        <li>"Name FCS-supported BUs"</li>
-      </ul>
+      <div class="intro-box">
+        <h1>Hello!</h1>
+        <p>
+          This agent can answer common questions associated with FCS processes.
+          Response time may vary, so your patience is appreciated.
+        </p>
+        <p><strong>Here are some things the agent can help you with:</strong></p>
+        <ul>
+          <li>"Please outline the onboarding process."</li>
+          <li>"Who is Graham White's controller?"</li>
+          <li>"Name the business units support by FCS."</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Right two-thirds: embedded chat -->
+    <!-- Right two-thirds: embedded chat with divider -->
     <div class="content">
       <iframe
         src="https://copilotstudio.microsoft.com/environments/f3e890b3-cfa2-e871-ac75-92ce50e7af1d/bots/cra55_fcsGeneralKnowledgeAssistant/webchat?__version__=2"
@@ -92,5 +108,6 @@
   </div>
 </body>
 </html>
+
 
 

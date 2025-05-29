@@ -5,13 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FCS General Knowledge Assistant</title>
   <style>
-    /* Make sure the page and iframe take up the full viewport */
+    /* Full-page black background */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
     }
+
+    /* Two-column flex layout */
+    .container {
+      display: flex;
+      height: 100%;
+    }
+    .sidebar {
+      flex: 1;               /* one third */
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    .content {
+      flex: 2;               /* two thirds */
+    }
+
+    /* Intro text styling */
+    .sidebar h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 0.9rem;
+    }
+    .sidebar ul li {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .sidebar ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0af;
+    }
+
     iframe {
       border: none;
       width: 100%;
@@ -21,9 +66,31 @@
   </style>
 </head>
 <body>
-  <iframe
-    src="https://copilotstudio.microsoft.com/environments/f3e890b3-cfa2-e871-ac75-92ce50e7af1d/bots/cra55_fcsGeneralKnowledgeAssistant/webchat?__version__=2"
-    title="FCS General Knowledge Assistant"
-  ></iframe>
+  <div class="container">
+    <!-- Left third: intro -->
+    <div class="sidebar">
+      <h1>Hello!</h1>
+      <p>
+        This agent can answer common questions associated with FCS processes.
+        Response time may vary, so your patience is appreciated.
+      </p>
+      <p><strong>Here are some things the agent can help you with:</strong></p>
+      <ul>
+        <li>"Outline onboarding process"</li>
+        <li>"Who is GWM's controller?"</li>
+        <li>"Name FCS-supported BUs"</li>
+      </ul>
+    </div>
+
+    <!-- Right two-thirds: embedded chat -->
+    <div class="content">
+      <iframe
+        src="https://copilotstudio.microsoft.com/environments/f3e890b3-cfa2-e871-ac75-92ce50e7af1d/bots/cra55_fcsGeneralKnowledgeAssistant/webchat?__version__=2"
+        title="FCS General Knowledge Assistant"
+      ></iframe>
+    </div>
+  </div>
 </body>
 </html>
+
+
